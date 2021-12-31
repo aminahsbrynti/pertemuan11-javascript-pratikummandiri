@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image picker</title>
+    <link rel="stylesheet" href="jsc2.css">
+    <!-- JavaSript -->
+    <script>
+        function pilih(){
+            let list_AMINAH = document.getElementById("AMINAH");
+            let idx = list_AMINAH.selectedIndex;
+            let area_gambar=document.getElementById("gambar");
+            area_gambar.src= list_AMINAH[idx].value+".jpg";
+        }
+    </script>
+</head>
+<body>
+    <ul>
+        <li><a href="javasc2_soal1.html">Login</a></li>
+        <li><a href="javasc2_soal2.html">Kurs</a></li>
+        <li><a href="javasc2_soal3.html">Mini Chat</a></li>
+        <li><a href="javasc2_soal4.html">Image Picker</a></li>
+        <li><a href="javasc2_from validasi.html">Tiket</a></li>
+      </ul>
+      <div class="container">
+           <h1>FOTO </h1>
+            <select id="AMINAH" onchange="pilih()">
+                <option value="FOTO 1">Images 1</option>
+                <option value="FOTO 2">Images 2</option>
+                <option value="FOTO 3">Images 3</option>
+                <option value="FOTO 4">Images 4</option>    
+                <option value="FOTO 5">Images 5</option>
+                <option value="FOTO 6">Images 6</option>
+            </select>
+        <br/>
+        
+        <img src="FOTO 1.jpg" alt="FOTO 1" id="gambar">
+      </div>
+</body>
+</html>
